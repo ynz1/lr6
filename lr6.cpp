@@ -81,3 +81,40 @@ void printStr(char** str, int n)
     }
     printf("\n");
 }
+
+void search(char** str, int n)
+{
+    int i, j;
+    void (*define)(int*, int);
+
+    int* resultStr = (int*)calloc(n, sizeof(int));
+    int counter = 0;
+    int maxElement = 0;
+    for (i = 0; i < n; i++)
+    {
+        counter = 0;
+        for (j = 0; j < 22; j++)
+        {
+            if (str[i][j] != '\0')
+            {
+                if (str[i][j] == ' ')
+                {
+                    counter = 0;
+                    continue;
+                }
+                counter++;
+            }
+            if (counter > resultStr[i])
+            {
+                resultStr[i] = counter;
+            }
+            if (str[i][j] == '\0')
+            {
+                break;
+            }
+        }
+    }
+
+
+    numStr(resultStr, n);
+}
