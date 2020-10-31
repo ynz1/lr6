@@ -115,7 +115,7 @@ void search(char** str, int n)
         }
     }
 
-
+    free(str);
     numStr(resultStr, n);
 }
 
@@ -138,4 +138,5 @@ void numStr(int* resultStr, int n)
             printf("Номер строки с самым длинным словом: %d\n", i + 1);
         }
     }
+    free(resultStr);
 }
