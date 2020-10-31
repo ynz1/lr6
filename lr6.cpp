@@ -104,7 +104,7 @@ void search(char** str, int n)
                 }
                 counter++;
             }
-            if (counter > resultStr[i+1])
+            if (counter > resultStr[i])
             {
                 resultStr[i] = counter;
             }
@@ -135,7 +135,7 @@ void numStr(int* resultStr, int n)
     {
         if (resultStr[i] == maxElement)
         {
-            printf("Номер строки с самым длинным словом: %d\n", i);
+            printf("Номер строки с самым длинным словом: %d\n", i + 1);
         }
     }
 }
