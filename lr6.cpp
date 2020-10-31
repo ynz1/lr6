@@ -118,3 +118,24 @@ void search(char** str, int n)
 
     numStr(resultStr, n);
 }
+
+void numStr(int* resultStr, int n)
+{
+    int i;
+    int maxElement = *resultStr;
+    for (i = 1; i < n; i++)
+    {
+        if (maxElement < resultStr[i])
+        {
+            maxElement = resultStr[i];
+        }
+    }
+
+    for (i = 0; i < n; i++)
+    {
+        if (resultStr[i] == maxElement)
+        {
+            printf("Номер строки с самым длинным словом: %d\n", i + 1);
+        }
+    }
+}
