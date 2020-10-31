@@ -106,7 +106,7 @@ void search(char** str, int n)
             }
             if (counter > resultStr[i+1])
             {
-                resultStr[i-1] = counter;
+                resultStr[i] = counter;
             }
             if (str[i][j] == '\0')
             {
@@ -125,7 +125,7 @@ void numStr(int* resultStr, int n)
     int maxElement = *resultStr;
     for (i = 1; i < n; i++)
     {
-        if (maxElement < resultStr[i+1])
+        if (maxElement < resultStr[i])
         {
             maxElement = resultStr[i];
         }
